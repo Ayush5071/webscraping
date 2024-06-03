@@ -27,7 +27,12 @@ specific_text = soup.find_all("p",string="Some bold text")
 import re
 
 specific_word = soup.find_all("p",string=re.compile("Some")) ### really OP
-print(specific_word)
+
+
+specific_word_diff_capitalisation = soup.find_all("h2",string=re.compile("(h|H)eader"))
+
+########### select for selecting elements based on css
+
 
 
 
