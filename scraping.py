@@ -33,8 +33,18 @@ specific_word_diff_capitalisation = soup.find_all("h2",string=re.compile("(h|H)e
 
 ########### select for selecting elements based on css
 
+content = soup.select("p") # similar as find_all
 
+paragraph2 = soup.select("h2 ~ p") #paragraph preceding after h2
 
+bold_text = soup.select("p#paragraph-id b") ## b attribute with parent as paragraph of the given id
 
+######### Get different properties of element : 
 
+h2_text = soup.find("h2").string # gives the string value inside <h2> .. </h2>
+
+divy = soup.find("div")
+print(divy.prettify())
+
+print(divy.get_text()) # used when there are so many nested elements 
 
