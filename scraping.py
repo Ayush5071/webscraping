@@ -44,7 +44,9 @@ bold_text = soup.select("p#paragraph-id b") ## b attribute with parent as paragr
 h2_text = soup.find("h2").string # gives the string value inside <h2> .. </h2>
 
 divy = soup.find("div")
-print(divy.prettify())
-
 print(divy.get_text()) # used when there are so many nested elements 
 
+######## we can aslo find siblings,children,parent in beautiful soup --> they all have built in functions 
+
+div_siblings = soup.find("div").find_next_siblings()
+print(div_siblings)
